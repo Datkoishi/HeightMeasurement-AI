@@ -2,11 +2,13 @@
 //  HeightMeasurement-Bridging-Header.h
 //  HeightMeasurement
 //
-//  Created by Trương Đạt on 16/3/25.
+//  Created for HeightMeasurement app
 //
 
-//
-//  Use this file to import your target's public headers that you would like to expose to Swift.
-//
+#ifndef HeightMeasurement_Bridging_Header_h
+#define HeightMeasurement_Bridging_Header_h
 
-#import "ShaderTypes.h"
+#include "ShaderTypes.h"
+
+#endif /* HeightMeasurement_Bridging_Header_h */
+

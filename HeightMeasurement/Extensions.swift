@@ -13,21 +13,6 @@ extension UIColor {
     }
 }
 
-// MARK: - SCNGeometrySource Extensions
-extension SCNGeometrySource {
-    convenience init(vertices: [SCNVector3]) {
-        let data = Data(bytes: vertices, count: vertices.count * MemoryLayout<SCNVector3>.size)
-        self.init(data: data,
-                semantic: .vertex,
-                vectorCount: vertices.count,
-                usesFloatComponents: true,
-                componentsPerVector: 3,
-                bytesPerComponent: MemoryLayout<Float>.size,
-                dataOffset: 0,
-                dataStride: MemoryLayout<SCNVector3>.size)
-    }
-}
-
 // MARK: - UIView Extensions
 extension UIView {
     func addShadow(opacity: Float = 0.5, radius: CGFloat = 5, offset: CGSize = CGSize(width: 0, height: 2)) {
@@ -45,6 +30,21 @@ extension Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss dd/MM/yyyy"
         return formatter.string(from: self)
+    }
+}
+
+// MARK: - SCNGeometrySource Extension
+extension SCNGeometrySource {
+    convenience init(vertices: [SCNVector3]) {
+        let data = Data(bytes: vertices, count: vertices.count * MemoryLayout<SCNVector3>.size)
+        self.init(data: data,
+                 semantic: .vertex,
+                 vectorCount: vertices.count,
+                 usesFloatComponents: true,
+                 componentsPerVector: 3,
+                 bytesPerComponent: MemoryLayout<Float>.size,
+                 dataOffset: 0,
+                 dataStride: MemoryLayout<SCNVector3>.size)
     }
 }
 
