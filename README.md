@@ -1,4 +1,4 @@
-Thought for 3 seconds### Ứng Dụng Đo Chiều Cao
+### Ứng Dụng Đo Chiều Cao
 
 ## Giới thiệu
 
