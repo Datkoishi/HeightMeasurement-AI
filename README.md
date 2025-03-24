@@ -1,77 +1,28 @@
-Thought for 2 seconds### HeightMeasurement
+Thought for 3 seconds### Ứng Dụng Đo Chiều Cao
 
-## Giới thiệu | Introduction
+## Giới thiệu
 
-| **Tiếng Việt**
+Ứng dụng Đo Chiều Cao là một ứng dụng iOS sử dụng công nghệ ARKit và Body Tracking để đo chiều cao của người dùng một cách chính xác thông qua camera của thiết bị. Ứng dụng cung cấp giao diện trực quan, dễ sử dụng và nhiều tính năng hữu ích.
 
-HeightMeasurement là ứng dụng iOS sử dụng công nghệ AR (Augmented Reality) để đo chiều cao của người dùng một cách chính xác. Ứng dụng sử dụng camera của thiết bị để nhận diện cơ thể người và tính toán chiều cao dựa trên khoảng cách từ đầu đến chân.
+## Tính năng chính
 
- | **English**
-
-HeightMeasurement is an iOS application that uses AR (Augmented Reality) technology to accurately measure a person's height. The app uses the device's camera to detect the human body and calculate height based on the distance from head to feet.
-
-
-
-
-## Ảnh minh họa | Screenshots
-
-*Hình ảnh ứng dụng sẽ được thêm vào sau khi triển khai*
-
-*Screenshots will be added after deployment*
-
-## Tính năng | Features
-
-| **Tiếng Việt**
-
-- Đo chiều cao người thời gian thực
-- Hiển thị kết quả đo bằng nhiều đơn vị khác nhau (m, cm, feet, inches)
-- Hiệu chỉnh kết quả đo dựa trên chiều cao thực tế của người dùng
-- Hiển thị trực quan khung xương người
-- Chế độ tối/sáng
-- Chụp ảnh màn hình kết quả đo
-- Giao diện người dùng đơn giản, dễ sử dụng
+- **Đo chiều cao chính xác**: Sử dụng ARKit và Body Tracking để nhận diện và đo chiều cao người dùng
+- **Hiệu chỉnh kết quả**: Cho phép người dùng hiệu chỉnh kết quả đo dựa trên chiều cao thực tế
+- **Đa dạng đơn vị đo**: Hỗ trợ nhiều đơn vị đo khác nhau (mét, centimét, feet, inch)
+- **Trực quan hóa**: Hiển thị hình ảnh trực quan của skeleton người dùng
+- **Lưu kết quả**: Lưu trữ lịch sử các kết quả đo
+- **Chụp màn hình**: Cho phép chụp và lưu kết quả đo vào thư viện ảnh
+- **Chế độ tối/sáng**: Hỗ trợ chuyển đổi giữa giao diện tối và sáng
 
 
- | **English**
+## Yêu cầu hệ thống
 
-- Real-time human height measurement
-- Display measurement results in multiple units (m, cm, feet, inches)
-- Calibrate measurement results based on the user's actual height
-- Visual display of human skeleton
-- Dark/light mode
-- Screenshot measurement results
-- Simple, user-friendly interface
+- iOS 14.0 trở lên
+- iPhone XS, XR, 11 trở lên hoặc iPad Pro với chip A12 Bionic trở lên (yêu cầu hỗ trợ ARKit 3 và Body Tracking)
+- Xcode 12.0 trở lên (để build và chạy dự án)
 
 
-
-
-
-## Yêu cầu hệ thống | System Requirements
-
-| **Tiếng Việt**
-
-- iOS 16.0 trở lên
-- iPhone XS/XR trở lên hoặc iPad Pro (2018) trở lên
-- Thiết bị hỗ trợ ARKit và Body Tracking
-- Xcode 14.0 trở lên (để build)
-
-
- | **English**
-
-- iOS 16.0 or later
-- iPhone XS/XR or later, or iPad Pro (2018) or later
-- Device supporting ARKit and Body Tracking
-- Xcode 14.0 or later (for building)
-
-
-
-
-
-## Cài đặt | Installation
-
-| **Tiếng Việt**
-
-### Từ mã nguồn:
+## Cài đặt
 
 1. Clone repository:
 
@@ -81,146 +32,62 @@ git clone https://github.com/yourusername/HeightMeasurement.git
 ```
 
 2. Mở file HeightMeasurement.xcodeproj bằng Xcode
-3. Chọn thiết bị đích và nhấn Run
+3. Chọn thiết bị đích (iPhone hoặc iPad hỗ trợ ARKit 3)
+4. Build và chạy ứng dụng (⌘+R)
 
 
-### Yêu cầu quyền:
+## Hướng dẫn sử dụng
 
-Ứng dụng sẽ yêu cầu quyền truy cập:
-
-- Camera (để sử dụng AR)
-- Thư viện ảnh (để lưu ảnh chụp màn hình)
-
-
- | **English**
-
-### From source code:
-
-1. Clone the repository:
-
-
-```shellscript
-git clone https://github.com/yourusername/HeightMeasurement.git
-```
-
-2. Open HeightMeasurement.xcodeproj with Xcode
-3. Select your target device and press Run
-
-
-### Required permissions:
-
-The app will request access to:
-
-- Camera (for AR functionality)
-- Photo Library (to save screenshots)
-
-
-
-
-
-## Cách sử dụng | How to Use
-
-| **Tiếng Việt**
-
-1. Mở ứng dụng và cho phép truy cập camera
+1. Khi mở ứng dụng, cho phép ứng dụng truy cập camera
 2. Di chuyển camera để quét môi trường xung quanh
-3. Đứng cách thiết bị khoảng 2-3 mét để camera có thể nhìn thấy toàn bộ cơ thể
-4. Ứng dụng sẽ tự động nhận diện và hiển thị chiều cao
-5. Sử dụng nút "Hiệu chỉnh" để điều chỉnh kết quả đo nếu cần
-6. Thay đổi đơn vị đo bằng nút "Đơn vị"
-7. Chụp ảnh màn hình kết quả bằng nút camera
+3. Đứng cách thiết bị khoảng 2-3 mét để camera có thể nhìn thấy toàn thân
+4. Khi ứng dụng phát hiện người, chiều cao sẽ được hiển thị trên màn hình
+5. Sử dụng nút "Hiệu chỉnh" để điều chỉnh chiều cao nếu cần
+6. Sử dụng nút "Đơn vị" để chuyển đổi giữa các đơn vị đo khác nhau
+7. Sử dụng nút "Chụp ảnh" để lưu kết quả vào thư viện ảnh
 
 
- | **English**
+## Cấu trúc dự án
 
-1. Open the app and allow camera access
-2. Move the camera to scan the surrounding environment
-3. Stand about 2-3 meters away from the device so the camera can see your entire body
-4. The app will automatically detect and display your height
-5. Use the "Calibrate" button to adjust the measurement if needed
-6. Change the measurement unit with the "Unit" button
-7. Take a screenshot of the result using the camera button
-
-
-
+- **AppDelegate.swift**: Quản lý vòng đời ứng dụng
+- **ViewController.swift**: Màn hình chính, xử lý AR và đo chiều cao
+- **CalibrationView.swift**: Giao diện hiệu chỉnh chiều cao
+- **MeasurementManager.swift**: Quản lý lưu trữ kết quả đo
+- **Extensions.swift**: Các extension hỗ trợ
+- **Renderer.swift**: Xử lý render Metal
+- **Shaders.metal**: Shader Metal cho hiệu ứng đồ họa
+- **ShaderTypes.h**: Định nghĩa các kiểu dữ liệu cho shader
 
 
-## Công nghệ sử dụng | Technologies Used
+## Công nghệ sử dụng
 
-- Swift 5
-- ARKit
-- SceneKit
-- Metal/MetalKit
-- UIKit
-
-
-## Kiến trúc | Architecture
-
-| **Tiếng Việt**
-
-Ứng dụng được xây dựng theo mô hình MVC (Model-View-Controller):
-
-- **Model**: MeasurementRecord, MeasurementUnit, MeasurementManager
-- **View**: CalibrationView, ARSCNView, các UI elements
-- **Controller**: ViewController
-
-
-Các thành phần chính:
-
-- ARKit: Nhận diện cơ thể người và theo dõi chuyển động
-- SceneKit: Hiển thị hình ảnh 3D của khung xương
+- ARKit: Nhận diện và theo dõi cơ thể người dùng
+- SceneKit: Hiển thị đối tượng 3D
 - Metal: Xử lý đồ họa hiệu suất cao
+- UIKit: Xây dựng giao diện người dùng
 
 
- | **English**
+## Đóng góp
 
-The app is built using the MVC (Model-View-Controller) pattern:
+Mọi đóng góp đều được hoan nghênh! Nếu bạn muốn đóng góp, vui lòng:
 
-- **Model**: MeasurementRecord, MeasurementUnit, MeasurementManager
-- **View**: CalibrationView, ARSCNView, UI elements
-- **Controller**: ViewController
-
-
-Key components:
-
-- ARKit: Human body detection and motion tracking
-- SceneKit: 3D visualization of the skeleton
-- Metal: High-performance graphics processing
-
-
-
-
-
-## Đóng góp | Contributing
-
-| **Tiếng Việt**
-
-Đóng góp cho dự án luôn được chào đón. Để đóng góp:
-
-1. Fork repository
-2. Tạo branch mới (`git checkout -b feature/amazing-feature`)
-3. Commit thay đổi của bạn (`git commit -m 'Add some amazing feature'`)
-4. Push lên branch (`git push origin feature/amazing-feature`)
+1. Fork dự án
+2. Tạo nhánh tính năng (`git checkout -b feature/amazing-feature`)
+3. Commit thay đổi (`git commit -m 'Add some amazing feature'`)
+4. Push lên nhánh (`git push origin feature/amazing-feature`)
 5. Mở Pull Request
 
 
- | **English**
+## Giấy phép
 
-Contributions are always welcome. To contribute:
+Dự án này được phân phối dưới giấy phép MIT. Xem file `LICENSE` để biết thêm chi tiết.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## Liên hệ
 
+Trương Đạt - [https://truongdat.glitch.me/](https://truongdat.glitch.me/)
 
-
-
-
-
-
+Link dự án: [https://github.com/yourusername/HeightMeasurement](https://github.com/yourusername/HeightMeasurement)
 
 ---
 
-Developed with ❤️ using ARKit and Swift
+© 2025 Trương Đạt. Bảo lưu mọi quyền.
